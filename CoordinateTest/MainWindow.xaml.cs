@@ -57,7 +57,6 @@ namespace CoordinateTest
                     await Task.Delay(1000);
                 }
             });
-
         }
 
         public void Check(object sender, EventArgs e)
