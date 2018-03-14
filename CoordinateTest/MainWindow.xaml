@@ -9,21 +9,18 @@
         WindowStyle="None"
         Title="MainWindow" Height="1080" Width="1920">
     <Grid x:Name="grid">
-        <TextBlock x:Name="XYBox" HorizontalAlignment="Left" Margin="-5,-8,0,0" TextWrapping="Wrap" Text="XY Here" VerticalAlignment="Top" Height="360" Width="480" FontSize="48" Background="#FFE27930"/>
-        <TextBlock x:Name="XYBox_Copy" HorizontalAlignment="Left" Margin="-5,712,0,0" TextWrapping="Wrap" Text="XY Here" VerticalAlignment="Top" Height="360" Width="480" FontSize="48" Background="#FFB83030"/>
-        <TextBlock x:Name="XYBox_Copy1" HorizontalAlignment="Left" Margin="1435,-8,-3,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="175" Width="480" FontSize="48" Background="#FF35B928"><Run Text="XY Here"/><InlineUIContainer x:Name="v">
-                <Button x:Name="button" Content="Button" Width="185" Click="Button_Click" Visibility="Hidden"/>
-            </InlineUIContainer></TextBlock>
-        <TextBlock x:Name="XYBox_Copy2" HorizontalAlignment="Left" Margin="1435,712,-3,0" TextWrapping="Wrap" Text="XY Here" VerticalAlignment="Top" Height="360" Width="480" FontSize="48" Foreground="#FF0C8DBD" Background="#FF21CEEA"/>
-        <TextBlock x:Name="XYBox_Copy3" HorizontalAlignment="Left" Margin="475,-8,0,0" TextWrapping="Wrap" Text="XY Here" VerticalAlignment="Top" Height="360" Width="480" FontSize="48" Background="#FFAC1C71"/>
-        <TextBlock x:Name="XYBox_Copy4" HorizontalAlignment="Left" Margin="955,-8,0,0" TextWrapping="Wrap" Text="XY Here" VerticalAlignment="Top" Height="360" Width="480" FontSize="48" Background="#FFE27930"/>
-        <TextBlock x:Name="XYBox_Copy5" HorizontalAlignment="Left" Margin="-5,352,0,0" TextWrapping="Wrap" Text="XY Here" VerticalAlignment="Top" Height="360" Width="480" FontSize="48" Background="#FF30E2CA"/>
-        <TextBlock x:Name="XYBox_Copy6" HorizontalAlignment="Left" Margin="475,352,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="360" Width="480" FontSize="48" Background="#FF58E230" Text="XY Here"/>
-        <TextBlock x:Name="XYBox_Copy7" HorizontalAlignment="Left" Margin="955,712,0,0" TextWrapping="Wrap" Text="XY Here" VerticalAlignment="Top" Height="360" Width="480" FontSize="48" Background="#FFE27930"/>
-        <TextBlock x:Name="XYBox_Copy8" HorizontalAlignment="Left" Margin="475,712,0,0" TextWrapping="Wrap" Text="XY Here" VerticalAlignment="Top" Height="360" Width="480" FontSize="48" Background="#FF35B928"/>
-        <TextBlock x:Name="XYBox_Copy9" HorizontalAlignment="Left" Margin="955,352,0,0" TextWrapping="Wrap" Text="XY Here" VerticalAlignment="Top" Height="360" Width="480" FontSize="48" Background="#FFE23079"/>
-        <TextBlock x:Name="XYBox_Copy10" HorizontalAlignment="Left" Margin="1435,352,-3,0" TextWrapping="Wrap" Text="XY Here" VerticalAlignment="Top" Height="360" Width="480" FontSize="48" Background="#FFE27930"/>
-        <TextBlock x:Name="finish" HorizontalAlignment="Left" Margin="1519,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="274" Text=" Button not clicked"/>
+        <TextBlock x:Name="TopLeft" HorizontalAlignment="Left" Margin="-5,-8,0,0" TextWrapping="Wrap" Text="XY Here" VerticalAlignment="Top" Height="360" Width="480" FontSize="48" Background="#FFE23030"/>
+        <TextBlock x:Name="BottomLeft" HorizontalAlignment="Left" Margin="-5,712,0,0" TextWrapping="Wrap" Text="XY Here" VerticalAlignment="Top" Height="360" Width="480" FontSize="48" Background="#FFB83030"/>
+        <TextBlock x:Name="TopRight" HorizontalAlignment="Left" Margin="1435,-8,-3,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="355" Width="480" FontSize="48" Background="#FFB92828"><Run Text="XY Here"/></TextBlock>
+        <TextBlock x:Name="BottomRight" HorizontalAlignment="Left" Margin="1435,712,-3,0" TextWrapping="Wrap" Text="XY Here" VerticalAlignment="Top" Height="360" Width="480" FontSize="48" Foreground="#FF0C8DBD" Background="#FFEA2121"/>
+        <TextBlock x:Name="TopMiddleLeft" HorizontalAlignment="Left" Margin="475,-8,0,0" TextWrapping="Wrap" Text="XY Here" VerticalAlignment="Top" Height="360" Width="480" FontSize="48" Background="#FFAC1C1C"/>
+        <TextBlock x:Name="TopMiddleRight" HorizontalAlignment="Left" Margin="955,-8,0,0" TextWrapping="Wrap" Text="XY Here" VerticalAlignment="Top" Height="360" Width="480" FontSize="48" Background="#FFE23030"/>
+        <TextBlock x:Name="MiddleLeft" HorizontalAlignment="Left" Margin="-5,352,0,0" TextWrapping="Wrap" Text="XY Here" VerticalAlignment="Top" Height="360" Width="480" FontSize="48" Background="#FFE60000"/>
+        <TextBlock x:Name="MiddleMiddleLeft" HorizontalAlignment="Left" Margin="475,352,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="360" Width="480" FontSize="48" Background="#FFE23030" Text="XY Here"/>
+        <TextBlock x:Name="BottomMiddleRight" HorizontalAlignment="Left" Margin="955,712,0,0" TextWrapping="Wrap" Text="XY Here" VerticalAlignment="Top" Height="360" Width="480" FontSize="48" Background="#FFE23030"/>
+        <TextBlock x:Name="BottomMiddleLeft" HorizontalAlignment="Left" Margin="475,712,0,0" TextWrapping="Wrap" Text="XY Here" VerticalAlignment="Top" Height="360" Width="480" FontSize="48" Background="#FFD40202"/>
+        <TextBlock x:Name="MiddleMiddleRight" HorizontalAlignment="Left" Margin="955,352,0,0" TextWrapping="Wrap" Text="XY Here" VerticalAlignment="Top" Height="360" Width="480" FontSize="48" Background="#FFCF0000"/>
+        <TextBlock x:Name="MiddleRight" HorizontalAlignment="Left" Margin="1435,352,-3,0" TextWrapping="Wrap" Text="XY Here" VerticalAlignment="Top" Height="360" Width="480" FontSize="48" Background="#FFE23030"/>
 
     </Grid>
 </Window>

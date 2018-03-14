@@ -6,17 +6,10 @@ using System.Threading.Tasks;
 using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using Tobii.Interaction;
 using Tobii.EyeX.Framework;
 using EyeXFramework;
 using System.Threading;
+using System.Windows.Media;
 
 namespace CoordinateTest
 
@@ -27,8 +20,13 @@ namespace CoordinateTest
         private double y;
         private string previousPosition;
         private string currentPosition;
+        int maxCount = 3;
 
         private int count = 0;
+
+        List<int> xsizes = new List<int>() { 480, 240, 120 };
+        List<int> ysizes = new List<int>() { 360, 180, 90 };
+
 
         public MainWindow()
         {
@@ -68,11 +66,7 @@ namespace CoordinateTest
                 if (currentPosition == previousPosition)
                 {
                     Interlocked.Increment(ref count);
-
-                    if (count > 3)
-                    {
-                        button.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-                    }
+                    CheckLarge();
                 }
                 else
                 {
@@ -87,36 +81,72 @@ namespace CoordinateTest
 
         }
 
-        private void PrintPos()
+        private void CheckLarge()
         {
-            XYBox.Text = count + " \nPosition:  " + currentPosition;
-            XYBox_Copy1.Text = count + " \n\nPosition:  " + currentPosition;
-            XYBox_Copy2.Text = count + " \n\nPosition:  " + currentPosition;
-            XYBox_Copy3.Text = count + " \n\nPosition:  " + currentPosition;
-            XYBox_Copy4.Text = count + " \n\nPosition:  " + currentPosition;
-            XYBox_Copy5.Text = count + " \n\nPosition:  " + currentPosition;
-            XYBox_Copy6.Text = count + " \n\nPosition:  " + currentPosition;
-            XYBox_Copy7.Text = count + " \n\nPosition:  " + currentPosition;
-            XYBox_Copy8.Text = count + " \n\nPosition:  " + currentPosition;
-            XYBox_Copy9.Text = count + " \n\nPosition:  " + currentPosition;
-            XYBox_Copy10.Text = count + " \n\nPosition:  " + currentPosition;
-            XYBox_Copy.Text = count + " \n\nPosition:  " + currentPosition;
+            if (count > maxCount && currentPosition == "Top Left")
+            {
+                TopLeft.Background = Brushes.ForestGreen;
+            }
+            else if (count > maxCount && currentPosition == "Top Middle Left")
+            {
+                TopMiddleLeft.Background = Brushes.ForestGreen;
+            }
+            else if (count > maxCount && currentPosition == "Top Middle Right")
+            {
+                TopMiddleRight.Background = Brushes.ForestGreen;
+            }
+            else if (count > maxCount && currentPosition == "Top Right")
+            {
+                TopRight.Background = Brushes.ForestGreen;
+            }
+            else if (count > maxCount && currentPosition == "Middle Left")
+            {
+                MiddleLeft.Background = Brushes.ForestGreen;
+            }
+            else if (count > maxCount && currentPosition == "Middle Middle Left")
+            {
+                MiddleMiddleLeft.Background = Brushes.ForestGreen;
+            }
+            else if (count > maxCount && currentPosition == "Middle Middle Right")
+            {
+                MiddleMiddleRight.Background = Brushes.ForestGreen;
+            }
+            else if (count > maxCount && currentPosition == "Middle Right")
+            {
+                MiddleRight.Background = Brushes.ForestGreen;
+            }
+            else if (count > maxCount && currentPosition == "Bottom Left")
+            {
+                BottomLeft.Background = Brushes.ForestGreen;
+            }
+            else if (count > maxCount && currentPosition == "Bottom Middle Left")
+            {
+                BottomMiddleLeft.Background = Brushes.ForestGreen;
+            }
+            else if (count > maxCount && currentPosition == "Bottom Middle Right")
+            {
+                BottomMiddleRight.Background = Brushes.ForestGreen;
+            }
+            else if (count > maxCount && currentPosition == "Bottom Right")
+            {
+                BottomRight.Background = Brushes.ForestGreen;
+            }
         }
 
-        private void PrintXY()
+        private void PrintPos()
         {
-            XYBox.Text = "x: " + x.ToString() + " \ny:  " + y.ToString() + " \nPosition:  " + currentPosition;
-            XYBox_Copy1.Text = "x: " + x.ToString() + " \ny:  " + y.ToString() + " \nPosition:  " + currentPosition;
-            XYBox_Copy2.Text = "x: " + x.ToString() + " \ny:  " + y.ToString() + " \nPosition:  " + currentPosition;
-            XYBox_Copy3.Text = "x: " + x.ToString() + " \ny:  " + y.ToString() + " \nPosition:  " + currentPosition;
-            XYBox_Copy4.Text = "x: " + x.ToString() + " \ny:  " + y.ToString() + " \nPosition:  " + currentPosition;
-            XYBox_Copy5.Text = "x: " + x.ToString() + " \ny:  " + y.ToString() + " \nPosition:  " + currentPosition;
-            XYBox_Copy6.Text = "x: " + x.ToString() + " \ny:  " + y.ToString() + " \nPosition:  " + currentPosition;
-            XYBox_Copy7.Text = "x: " + x.ToString() + " \ny:  " + y.ToString() + " \nPosition:  " + currentPosition;
-            XYBox_Copy8.Text = "x: " + x.ToString() + " \ny:  " + y.ToString() + " \nPosition:  " + currentPosition;
-            XYBox_Copy9.Text = "x: " + x.ToString() + " \ny:  " + y.ToString() + " \nPosition:  " + currentPosition;
-            XYBox_Copy10.Text = "x: " + x.ToString() + " \ny:  " + y.ToString() + " \nPosition:  " + currentPosition;
-            XYBox_Copy.Text = "x: " + x.ToString() + " \ny:  " + y.ToString() + " \nPosition:  " + currentPosition;
+            TopLeft.Text = count + " \nPosition:  " + currentPosition;
+            TopMiddleLeft.Text = count + " \n\nPosition:  " + currentPosition;
+            TopMiddleRight.Text = count + " \n\nPosition:  " + currentPosition;
+            TopRight.Text = count + " \n\nPosition:  " + currentPosition;
+            MiddleLeft.Text = count + " \n\nPosition:  " + currentPosition;
+            MiddleMiddleLeft.Text = count + " \n\nPosition:  " + currentPosition;
+            MiddleMiddleRight.Text = count + " \n\nPosition:  " + currentPosition;
+            MiddleRight.Text = count + " \n\nPosition:  " + currentPosition;
+            BottomLeft.Text = count + " \n\nPosition:  " + currentPosition;
+            BottomMiddleLeft.Text = count + " \n\nPosition:  " + currentPosition;
+            BottomMiddleRight.Text = count + " \n\nPosition:  " + currentPosition;
+            BottomRight.Text = count + " \n\nPosition:  " + currentPosition;
         }
 
         private void SetXY(double X, double Y)
@@ -173,9 +203,5 @@ namespace CoordinateTest
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            finish.Text = "Button has been clicked!";
-        }
     }
 }
